@@ -12,12 +12,12 @@ def getSolidsFromElement(element, options=None):
 	try:
 		geos = element.get_Geometry(options)
 		for geo in geos:
-			if type(geo) == Solid and geo.Volume > 0:
+			if isinstance(geo, Solid) and geo.Volume > 0:
 				solids.Add(geo)
-			if type(geo) == GeometryInstance:
+			if isinstance(geo, GeometryInstance):
 				instanceGeos = geo.GetInstanceGeometry()
 				for igeo in instanceGeos:
-					if type(igeo) == Solid and igeo.Volume > 0:
+					if isinstance(igeo, Solid) and igeo.Volume > 0:
 						solids.append(igeo)
 	except:
 		pass
