@@ -1,4 +1,5 @@
-## Thinking process
+# How I added dimensions to beams automatically in Revit by using pyRevit
+
 I'm using the [pyRevit](https://github.com/eirannejad/pyRevit) framework to run the code in Revit. For the [PEP-8](https://www.python.org/dev/peps/pep-0008/) police, I acknowledge that I do not follow these rules. I use camelCase for variables and functions similar to the Java naming convention. This is an attempt to marry the Revit API naming conventions and still use lower case naming for functions. I know, it's not ideal and probably horrible to look at, but let's try to tolerate this and focus on the case.\
 One of my colleagues wants to dimension all the beams in each section view like this. This is the beam that we will work with to test the code:\
 <img src="img\wantedresult.png" width="600"/>\
